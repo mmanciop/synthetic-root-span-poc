@@ -1,0 +1,7 @@
+FROM openjdk:8-jdk-alpine
+
+ADD target/synthetic-root-span-0.0.1-SNAPSHOT.jar /app/server.jar
+
+ENTRYPOINT ["/usr/bin/java"]
+
+CMD ["-jar", "/app/server.jar"]
