@@ -30,6 +30,7 @@ services:
 # to the backend will be logged in a /opt/instana/agent/data/log/traces-XXX.log
 # DO NOT TURN IT ON IN PRODUCTION: MASSIVE OVERHEAD
 #      - ./com.instana.agent.main.sender.File.cfg:/opt/instana/agent/etc/instana/com.instana.agent.main.sender.File.cfg
+      - ./configuration.yaml:/root/configuration.yaml
       - /var/run/docker.sock:/var/run/docker.sock
       - /dev:/dev
       - /sys:/sys
@@ -39,10 +40,10 @@ services:
         aliases:
           - instana-agent
     environment:
-      - INSTANA_AGENT_ENDPOINT=saas-us-west-2.instana.io
-      - INSTANA_AGENT_ENDPOINT_PORT=443
+      - INSTANA_AGENT_ENDPOINT=<FILL THIS>
+      - INSTANA_AGENT_ENDPOINT_PORT=<FILL THIS>
       - INSTANA_AGENT_KEY=<FILL THIS>
-      # TODO Edit the line above ^^^^^^^
+      # TODO Edit the lines above ^^^^^^^
       - INSTANA_AGENT_ZONE=rewe-demo
     expose:
       - "42699"

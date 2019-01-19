@@ -30,4 +30,6 @@ The application will come up at your Docker's IP (e.g., `docker-machine ip`) at 
 `http://<docker-ip>:8080/api/google`
 
 Spam a few requests, search for the `SDK` service and `MarketXYZ` endpoint in Instana,
-and enjoy :-)
+and enjoy :D
+
+Also, the tag `rewe.custom_tag` will be searchable in the Analyze view via the `call.tag` filter.
